@@ -1,130 +1,232 @@
-# SIGAEG — Sistema Integrado de Gestão Académica Armando Emílio Guebuza
+<img width="1672" height="941" alt="logo1_horizontal" src="https://github.com/user-attachments/assets/d917e1fc-060a-43cf-bcee-c360fbdad2d9" />
 
-## Visão Geral
+# SIGAEG – Sistema Integrado de Gestão Académica Armando Emílio Guebuza
 
-SIGAEG é um sistema web escolar desenvolvido em PHP/MySQL para gerenciar utilizadores, turmas, horários, módulos, avaliações, presenças, ficheiros, mensagens e anúncios. O projeto suporta múltiplos perfis de utilizador:
+## Sobre o Projecto
 
-- Administrador
-- Formador
-- Formando
-- Encarregado de Educação
+O **SIGAEG (Sistema Integrado de Gestão Académica Armando Emílio Guebuza)** é uma aplicação web desenvolvida para apoiar a gestão académica de instituições de ensino técnico-profissional moçambicanas, permitindo centralizar e automatizar diversos processos administrativos e pedagógicos numa única plataforma. A plataforma foi desenvolvida em homenagem ao Instituto Industrial e de Computação Armando Emílio Guebuza, localizado em Boane, Maputo, Moçambique - especializado na formação de técnicos médios em diversas áreas do mercado.
 
-A aplicação foi concebida para correr em ambiente local com XAMPP e também pode ser preparada para publicação num servidor web.
+O sistema foi concebido com o objectivo de proporcionar uma gestão académica mais eficiente, reduzindo tarefas manuais e facilitando o acesso às informações por parte dos diferentes intervenientes da comunidade escolar. Através de uma interface intuitiva e organizada, o SIGAEG permite que administradores, formadores, formandos e encarregados de educação interajam com o sistema de acordo com as suas permissões.
 
-## Tecnologias
+O projecto foi desenvolvido utilizando tecnologias web modernas e encontra-se disponível online para demonstração.
 
-- PHP (servidor)
-- MySQL / MariaDB
-- HTML, CSS, JavaScript
-- jQuery
-- mPDF (biblioteca PHP usada via Composer)
+---
 
-## Estrutura do Projeto
+# Demonstração
 
-- `index.php` — página de login / registo e ponto de entrada
-- `config/` — configuração de base e conexão com a base de dados
-- `api/` — endpoints backend para ações de CRUD, autenticação e preferências
-- `includes/` — componentes partilhados, funções utilitárias, sidebar e menu
-- `assets/` — CSS, JavaScript, fontes e imagens
-- `pages/` — páginas de interface por perfil de utilizador
-- `logs/` — registo de erros e ações do sistema
-- `iicaeg_db.sql` / `iicaeg_db1.sql` — dumps de base de dados
-- `.htaccess` — definições de documentos de erro para o Apache
+A aplicação pode ser acedida através do seguinte endereço:
 
-## Funcionalidades Principais
+**🔗 Link:** *https://sigaeg.gt.tc*
 
-- Autenticação com login e registo via código de convite
-- Perfis de acesso baseados em níveis (1: Admin, 2: Formador, 3: Formando, 4: Encarregado)
-- Dashboard e navegação dinâmica para cada tipo de utilizador
-- Gestão de formandos, formadores, turmas, módulos e horários
-- Criação e gestão de avaliações, pautas e resultados
-- Registo de presenças e trabalhos académicos
-- Upload/download de ficheiros e mensagens internas
-- Preferências de tema e estado da sidebar guardadas em cookie/session
-- Notificações e sistema de logs
+---
 
-## Requisitos
+# Objectivos
 
-- PHP 8.x ou superior
-- MySQL / MariaDB
-- Apache com mod_rewrite (ou equivalente)
-- Composer
+O SIGAEG foi desenvolvido com os seguintes objectivos:
 
-## Instalação Local
+* Digitalizar os processos de gestão académica.
+* Centralizar informações administrativas e pedagógicas numa única plataforma.
+* Melhorar a comunicação entre administradores, formadores, formandos e encarregados de educação.
+* Facilitar o acompanhamento do desempenho académico dos formandos.
+* Reduzir o uso de processos manuais na administração escolar.
+* Disponibilizar um ambiente moderno, organizado e de fácil utilização.
 
-1. Copie a pasta do projeto para a pasta do servidor local, por exemplo `htdocs/iicaeg_sistema`.
-2. Importe a base de dados usando `iicaeg_db.sql` (ou `iicaeg_db1.sql` se aplicável).
-3. Execute `composer install` na raiz do projeto para instalar a dependência `mpdf/mpdf`.
-4. Atualize as configurações:
-   - `config/config.php` — defina `BASE_URL` para a URL local ou de produção.
-   - `config/db.php` — atualize `host`, `user`, `pass` e `db` para a sua base de dados.
-5. Se usar Apache, verifique o ficheiro `.htaccess` e atualize os caminhos de erro se o site não estiver em `/iicaeg_sistema/`.
+---
 
-## Configuração Importante
+# Funcionalidades
 
-### `config/config.php`
+O sistema disponibiliza um conjunto de funcionalidades destinadas à gestão completa da instituição de ensino.
 
-Defina `BASE_URL` com a URL correta do projeto.
+## Gestão de Utilizadores
 
-Exemplo local:
+* Registo e autenticação de utilizadores.
+* Gestão de diferentes perfis de acesso.
+* Controlo de permissões conforme o tipo de utilizador.
+* Recuperação e atualização de informações pessoais.
 
-```php
-define('BASE_URL', 'http://localhost/iicaeg_sistema/');
-```
+## Gestão Académica
 
-Exemplo de produção num subdiretório:
+O sistema permite administrar os principais elementos da estrutura académica, incluindo:
 
-```php
-define('BASE_URL', 'https://seu-dominio.com/iicaeg_sistema/');
-```
+* Formandos
+* Formadores
+* Turmas
+* Módulos
+* Horários
+* Avaliações
+* Trabalhos académicos
+* Presenças
 
-Se publicar na raiz do domínio, use:
+Cada recurso foi desenvolvido para simplificar o acompanhamento das actividades lectivas e facilitar o trabalho administrativo.
 
-```php
-define('BASE_URL', 'https://seu-dominio.com/');
-```
+## Comunicação
 
-### `config/db.php`
+Para melhorar a interação entre os utilizadores, o sistema disponibiliza:
 
-Atualize as credenciais da base de dados:
+* Publicação de anúncios.
+* Sistema de notificações.
+* Sistema de divulgação de ficheiros internos.
 
-```php
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'iicaeg_db';
-```
+## Gestão de Ficheiros
 
-### `.htaccess`
+Permite armazenar e disponibilizar documentos importantes através de funcionalidades de upload e download de ficheiros.
 
-O ficheiro `.htaccess` contém regras de documentos de erro com caminhos absolutos:
+## Dashboard
+
+Cada utilizador possui um painel personalizado, onde pode consultar rapidamente as informações mais relevantes de acordo com o seu perfil.
+
+---
+
+# Perfis de Utilizador
+
+O SIGAEG implementa um sistema de controlo de acesso baseado em perfis, garantindo que cada utilizador visualize apenas as funcionalidades correspondentes às suas responsabilidades.
+
+## Administrador
+
+Possui acesso completo ao sistema, podendo gerir utilizadores, turmas, módulos, horários, avaliações, presenças, anúncios, mensagens e demais configurações da plataforma.
+
+## Formador
+
+Responsável pela gestão das actividades pedagógicas, incluindo avaliações, presenças, trabalhos e acompanhamento dos formandos.
+
+## Formando
+
+Pode consultar horários, avaliações, presenças, trabalhos, anúncios, notificações e outras informações académicas.
+
+## Encarregado de Educação
+
+Tem acesso às informações académicas do formando sob sua responsabilidade, permitindo acompanhar o desempenho escolar de forma contínua.
+
+---
+
+# Tecnologias Utilizadas
+
+## Backend
+
+* PHP
+* MySQL
+
+## Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+* jQuery
+
+## Bibliotecas
+
+* mPDF
+* Font Awesome
+* html5canvas
+* Chart.js
+
+## Ferramentas
+
+* XAMPP
+* Composer
+* Git
+* GitHub
+
+---
+
+# Estrutura do Projeto
 
 ```text
-ErrorDocument 404 /iicaeg_sistema/pages/404.php
-ErrorDocument 403 /iicaeg_sistema/pages/404.php
-ErrorDocument 500 /iicaeg_sistema/pages/404.php
+SIGAEG/
+│
+├── api/                Endpoints da aplicação
+├── assets/             CSS, JavaScript, imagens e fontes
+├── config/             Configurações do sistema
+├── includes/           Componentes reutilizáveis
+├── logs/               Registos do sistema
+├── pages/              Interfaces da aplicação
+├── uploads/            Ficheiros enviados pelos utilizadores
+├── vendor/             Dependências instaladas pelo Composer
+│
+├── index.php           Página inicial
+├── composer.json
+└── README.md
 ```
 
-Se o site estiver instalado fora de `/iicaeg_sistema/`, atualize estes caminhos para o novo caminho ou para a raiz.
+A estrutura foi organizada de forma modular para facilitar a manutenção, reutilização de componentes e evolução futura da aplicação.
 
-## Uso
+---
 
-1. Aceda a `index.php` no browser.
-2. Faça login com as credenciais existentes ou use o registo com um código de convite.
-3. O sistema redireciona automaticamente para o dashboard correto em função do nível de acesso.
+# Requisitos
 
-## Credenciais de Teste
+Para executar o projecto localmente são necessários:
 
-## Notas de Desenvolvimento
+* PHP 8 ou superior;
+* MySQL ou MariaDB;
+* Apache;
+* Composer.
 
-- A página usa cookies para guardar o tema (`iicaeg_tema`) e estado da sidebar (`iicaeg_sidebar`).
-- A lógica de login com "lembrar de mim" grava um token em `usuarios.remember_token`.
-- O registo (`api/entrar_cadastrar.php`) exige que o email esteja pré-cadastrado em `codigos_autorizados` e nos perfis de utilizador.
-- A sidebar é renderizada em `includes/sidebar.php` e o menu em `includes/menu.php`.
+---
 
-## Como Contribuir
+# Instalação
 
-1. Faça um fork do projeto.
-2. Crie uma branch com a sua melhoria: `git checkout -b feature/nome-da-funcionalidade`.
-3. Faça commit das alterações.
-4. Envie um pull request.
+## 1. Clonar o repositório
+
+```bash
+git clone https://github.com/SEU-USUARIO/SIGAEG.git
+```
+
+## 2. Aceder ao diretório
+
+```bash
+cd SIGAEG
+```
+
+## 3. Instalar as dependências
+
+```bash
+composer install
+```
+
+## 4. Importar a base de dados
+
+Importe o ficheiro SQL disponibilizado no projecto utilizando o phpMyAdmin ou outra ferramenta compatível.
+
+## 5. Configurar a ligação à base de dados
+
+Actualize as credenciais no ficheiro correspondente à configuração da base de dados.
+
+## 6. Executar o projecto
+
+Coloque o projecto no diretório do servidor web (XAMPP, WAMP ou Laragon) e aceda ao sistema através do navegador.
+
+---
+
+# Estado do Projecto
+
+O projecto encontra-se funcional e continua em evolução, podendo receber melhorias, optimizações e novas funcionalidades.
+
+---
+
+# Contribuições
+
+Contribuições são bem-vindas.
+
+Caso pretenda colaborar com o projecto:
+
+1. Faça um Fork do repositório.
+2. Crie uma nova branch para a funcionalidade ou correção.
+3. Efectue as alterações necessárias.
+4. Faça commit das alterações.
+5. Envie um Pull Request.
+
+---
+
+# Autor
+
+**Carlos Langa**
+
+Desenvolvedor Web: *[(GitHub)](https://github.com/CarlosLanga)*
+
+---
+
+# Licença
+
+Este projecto foi desenvolvido para fins académicos e educativos.
+
+Caso pretenda reutilizar parte do código, recomenda-se a atribuição dos devidos créditos ao autor.
