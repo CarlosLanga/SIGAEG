@@ -1,0 +1,217 @@
+﻿.formando-portal {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.portal-toolbar,
+.portal-filter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    align-items: end;
+}
+
+.portal-toolbar:empty {
+    display: none;
+}
+
+.portal-empty {
+    border: 1px dashed var(--border-soft);
+    border-radius: 12px;
+    padding: 18px;
+    color: var(--text-muted);
+    background: var(--surface-1);
+}
+
+.portal-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.portal-info-item {
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    background: var(--surface-1);
+    padding: 12px;
+}
+
+.portal-info-item span {
+    display: block;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.portal-info-item strong {
+    color: var(--text-main);
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.portal-progress {
+    min-width: 130px;
+}
+
+.portal-progress-track {
+    height: 8px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--border-soft) 70%, transparent);
+    overflow: hidden;
+}
+
+.portal-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #16a34a, #22c55e);
+}
+
+.portal-progress-text {
+    margin-top: 4px;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: right;
+}
+
+.portal-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.portal-file-list {
+    display: grid;
+    gap: 10px;
+}
+
+.portal-file-item {
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    background: var(--surface-1);
+}
+
+.portal-file-item h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+}
+
+.portal-file-item p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.portal-submit-form {
+    display: grid;
+    gap: 12px;
+}
+
+@media (max-width: 900px) {
+    .portal-toolbar,
+    .portal-filter-grid,
+    .portal-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portal-file-item {
+        grid-template-columns: 1fr;
+    }
+}
+.module-progress {
+    display: grid;
+    grid-template-columns: minmax(120px, 1fr) 42px;
+    align-items: center;
+    gap: 10px;
+    max-width: 260px;
+}
+
+.module-progress-track {
+    height: 9px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    overflow: hidden;
+}
+
+.module-progress-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 999px;
+    background: var(--text-muted);
+}
+
+.module-progress span {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.module-progress.is-a .module-progress-fill {
+    background: #16a34a;
+}
+
+.module-progress.is-na .module-progress-fill {
+    width: 10px !important;
+    background: #ef4444;
+}
+
+.module-progress.is-pending .module-progress-fill {
+    background: color-mix(in srgb, var(--text-muted) 35%, transparent);
+}
+
+.module-result {
+    display: inline-flex;
+    min-width: 36px;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 800;
+    border: 1px solid var(--border-soft);
+    color: var(--text-muted);
+    background: var(--surface-1);
+}
+
+.module-result.is-a {
+    color: #166534;
+    border-color: #86efac;
+    background: #dcfce7;
+}
+
+.module-result.is-na {
+    color: #991b1b;
+    border-color: #fca5a5;
+    background: #fee2e2;
+}
+
+body.dark .module-result.is-a {
+    color: #86efac;
+    border-color: rgba(134, 239, 172, 0.35);
+    background: rgba(22, 101, 52, 0.2);
+}
+
+body.dark .module-result.is-na {
+    color: #fecaca;
+    border-color: rgba(252, 165, 165, 0.35);
+    background: rgba(127, 29, 29, 0.28);
+}
+
+@media (max-width: 640px) {
+    .module-progress {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .module-progress span {
+        text-align: left;
+    }
+}
+

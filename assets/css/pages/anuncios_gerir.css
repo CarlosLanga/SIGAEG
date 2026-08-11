@@ -1,0 +1,310 @@
+.anuncios-gerir-page {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.anuncios-table-tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.anuncios-table-tools .anuncios-search {
+    flex: 1 1 280px;
+    min-width: 220px;
+}
+
+.anuncios-table-tools .anuncios-filter-prioridade {
+    flex: 0 0 200px;
+    min-width: 160px;
+}
+
+.anuncios-table-tools .input-with-icon {
+    position: relative;
+}
+
+.anuncios-table-tools .input-with-icon i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.anuncios-table-tools .input-with-icon input {
+    padding-left: 36px;
+}
+
+.anuncios-novo-btn {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+/* Tabela */
+.anuncios-table-wrap {
+    overflow-x: auto;
+}
+
+.anuncio-titulo-cell {
+    font-weight: 600;
+    color: var(--text-main);
+    max-width: 280px;
+}
+
+.anuncio-anexo-cell {
+    text-align: center;
+}
+
+.anuncio-anexo-link {
+    color: var(--accent);
+    font-size: 16px;
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+.anuncio-status-tag.expirado {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(239, 68, 68, 0.12);
+    color: #ef4444;
+}
+
+.anuncio-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.25;
+}
+
+.anuncio-badge.prio-normal {
+    background: rgba(59, 130, 246, 0.15);
+    color: #3b82f6;
+}
+
+.anuncio-badge.prio-importante {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;}
+
+.anuncio-badge.prio-evento {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;}
+
+/* Botões de acção */
+.anuncio-acoes-cell {
+    white-space: nowrap;
+}
+
+.anuncio-acoes-cell .icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    background: var(--bg-soft);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin-right: 6px;
+}
+
+.anuncio-acoes-cell .icon-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.anuncio-acoes-cell .icon-btn.delete:hover {
+    color: #ef4444;
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.08);
+}
+
+.anuncio-modal-overlay,
+.anuncio-confirm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 16px;
+}
+
+.anuncio-modal-card {
+    position: relative;
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    padding: 28px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+    color: var(--text-main);
+}
+
+.anuncio-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: var(--bg-soft);
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.anuncio-modal-close:hover {
+    color: var(--text-main);
+    background: var(--surface-hover);
+}
+
+.anuncio-modal-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.anuncio-modal-card h2 {
+    margin: 0 0 6px 0;
+    font-size: 22px;
+    color: var(--text-main);
+    word-break: break-word;
+}
+
+.anuncio-modal-meta {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 0 0 16px 0;
+}
+
+.anuncio-modal-event {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #22c55e;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.anuncio-modal-content {
+    color: var(--text-main);
+    font-size: 15px;
+    line-height: 1.65;
+    word-break: break-word;
+}
+
+.anuncio-modal-content p {
+    margin-bottom: 10px;
+}
+
+.anuncio-modal-content a {
+    color: var(--accent);
+}
+
+.anuncio-modal-anexo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border-soft);
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.anuncio-modal-anexo:hover {
+    border-color: var(--accent);
+}
+
+.anuncio-confirm-card {
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    padding: 28px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+    color: var(--text-main);
+}
+
+.anuncio-confirm-card > i {
+    font-size: 40px;
+    color: #f59e0b;
+    margin-bottom: 12px;
+}
+
+.anuncio-confirm-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    color: var(--text-main);
+}
+
+.anuncio-confirm-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0 0 22px 0;
+    line-height: 1.5;
+}
+
+.anuncio-confirm-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn-danger {
+    background: #ef4444;
+    border-color: #ef4444;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+    border-color: #dc2626;
+}
+
+@media (max-width: 640px) {
+    .anuncios-table-tools .anuncios-search,
+    .anuncios-table-tools .anuncios-filter-prioridade {
+        flex: 1 1 100%;
+    }
+
+    .anuncios-novo-btn {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+}

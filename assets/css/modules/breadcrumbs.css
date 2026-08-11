@@ -1,0 +1,39 @@
+.breadcrumbs {
+    margin-top: 6px;
+}
+
+.breadcrumbs i {
+    margin-right: 6px;
+    font-size: 13px;
+}
+
+.breadcrumbs ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumbs li::after {
+    content: "/";
+    margin-left: 8px;
+    color: var(--text-muted);
+}
+
+.breadcrumbs li:last-child::after {
+    content: "";
+}
+
+.breadcrumbs a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent);
+}
+

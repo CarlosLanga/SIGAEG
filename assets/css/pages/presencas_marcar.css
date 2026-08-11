@@ -1,0 +1,223 @@
+.presencas-page .form-grid {
+    margin-bottom: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.presenca-info {
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+    background: var(--surface-1);
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+.presenca-info.info-warning {
+    background: #fff7d7;
+    border-color: #f2d27b;
+    color: #7e5a00;
+}
+
+.presenca-info.info-ok {
+    background: #e8f8ee;
+    border-color: #bde8cb;
+    color: #1f7a3b;
+}
+
+.slots-wrap {
+    margin-top: 18px;
+}
+
+.slots-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.slot-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border-soft);
+    border-radius: 999px;
+    padding: 6px 12px;
+    background: var(--surface-1);
+    font-size: 13px;
+}
+
+.presenca-acoes {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.presenca-acoes {
+    margin-bottom: 12px;
+    justify-content: space-between;
+}
+
+.acoes-rapidas {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mass-select {
+    min-width: 220px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.mass-select .form-field {
+    min-width: 220px;
+}
+
+.acoes-direita {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.presenca-footer {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    background: #ffe7a1;
+    color: #7a5a00;
+}
+
+.status-badge.is-publicado {
+    background: #c7f5d6;
+    color: #1f7a3b;
+}
+
+.card-wd {
+    background: #8b5cf6;
+    color: #fff;
+}
+
+.card-d {
+    background: #ef4444;
+    color: #fff;
+}
+
+.presencas-page .summary-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(226, 232, 240, 0.7));
+    border: 1px solid rgba(148, 163, 184, 0.32);
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.1);
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+    padding: 14px 16px;
+    gap: 12px;
+}
+
+.presencas-page .summary-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(116, 148, 236, 0.25), transparent 55%);
+    pointer-events: none;
+}
+
+body.dark .presencas-page .summary-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(30, 41, 59, 0.55));
+    border-color: rgba(148, 163, 184, 0.22);
+}
+
+.presencas-page .summary-card .card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.presencas-page .summary-card .card-info h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.presencas-page .summary-card .summary-value {
+    font-size: 22px;
+}
+
+.table-select,
+.table-input {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+    background: var(--input-bg);
+    color: var(--text-main);
+    font-size: 13px;
+}
+
+.table-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4,6 8,10 12,6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 14px 14px;
+    padding-right: 30px;
+}
+
+.table-select:focus,
+.table-input:focus {
+    border-color: var(--accent);
+}
+
+.presenca-footer {
+    position: relative;
+    background: transparent;
+    padding: 8px 0 0;
+}
+
+.presenca-footer .status-badge {
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+@media (max-width: 900px) {
+    .mass-select {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .acoes-rapidas {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .presencas-page .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .presenca-acoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mass-select {
+        width: 100%;
+    }
+}

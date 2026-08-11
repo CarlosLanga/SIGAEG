@@ -1,0 +1,163 @@
+:host {
+  --color-bg-default: var(--surface-1, #ffffff);
+  --color-bg-secondary: var(--surface-2, #f9f9f9);
+  --color-fg-default: var(--text-main, #334155);
+  --color-fg-primary: var(--accent, #7494ec);
+  --color-fg-secondary: var(--text-muted, #64748b);
+  --color-fg-selected: #ffffff;
+  --color-fg-muted: var(--text-muted, #94a3b8);
+  --color-fg-accent: var(--danger, #DC3545);
+  
+  --color-btn-primary-bg: var(--accent, #7494ec);
+  --color-btn-primary-fg: #ffffff;
+  --color-btn-primary-border: var(--accent, #7494ec);
+  --color-btn-primary-hover-bg: var(--accent-hover, #5d7edb);
+  --color-btn-primary-hover-fg: #ffffff;
+  --color-btn-primary-hover-border: var(--accent-hover, #5d7edb);
+  
+  --color-btn-secondary-bg: var(--surface-1, #ffffff);
+  --color-btn-secondary-fg: var(--text-muted, #64748b);
+  --color-btn-secondary-border: var(--border-soft, #e2e8f8);
+  --color-btn-secondary-hover-bg: var(--surface-hover, #f1f5ff);
+  --color-btn-secondary-hover-fg: var(--accent, #7494ec);
+  --color-btn-secondary-hover-border: var(--accent, #7494ec);
+  
+  --color-border-default: var(--border-soft, #e2e8f8);
+  --color-border-locked: var(--surface-2, #fcfdfe);
+
+  /* Locked/past dates - use theme-aware variables */
+  --color-fg-locked: var(--text-muted, #94a3b8);
+  --color-bg-locked: transparent;
+  --color-bg-unavailable: var(--surface-2, #f9f9f9);
+  
+  --day-width: 42px;
+  --day-height: 38px;
+  --border-radius: 8px;
+  --primary-color: var(--accent, #7494ec);
+  --secondary-color: var(--text-muted, #64748b);
+}
+
+.container {
+  border: 1px solid var(--border-soft) !important;
+  border-radius: 12px !important;
+  background-color: var(--surface-1) !important;
+  color: var(--text-main) !important;
+  font-family: 'Poppins', 'Segoe UI', sans-serif !important;
+}
+
+.container.show {
+  box-shadow: 0 10px 30px var(--shadow-md, rgba(0,0,0,0.15)) !important;
+}
+
+.container > main {
+  background-color: var(--surface-1) !important;
+}
+
+.container > header, 
+.container > footer {
+  background-color: var(--surface-2) !important;
+}
+
+/* Month/year header title */
+.calendar > .header .title,
+.calendar > .header .month-name {
+  color: var(--text-main) !important;
+  font-weight: 600 !important;
+  font-family: inherit !important;
+}
+
+/* Navigation arrows */
+.calendar > .header button {
+  color: var(--text-muted) !important;
+  border-radius: 6px !important;
+}
+
+.calendar > .header button:hover {
+  color: var(--accent) !important;
+  background-color: var(--surface-hover) !important;
+}
+
+.calendar > .header button:hover svg {
+  fill: var(--accent) !important;
+}
+
+.calendar > .header button svg {
+  fill: var(--text-muted) !important;
+}
+
+/* Day names (Mon, Tue, etc.) */
+.calendar > .daynames-row > .dayname {
+  color: var(--text-muted) !important;
+}
+
+/* Normal days */
+.day {
+  color: var(--text-main) !important;
+  border-radius: 6px !important;
+  transition: all 0.15s ease !important;
+}
+
+.day:hover {
+  background-color: var(--surface-hover) !important;
+  color: var(--accent) !important;
+}
+
+/* Today */
+.day.today {
+  border: 1px solid var(--ideal-yellow, #d4a017) !important;
+  color: var(--accent) !important;
+}
+
+.day.today.selected {
+  border-color: var(--ideal-yellow, #d4a017) !important;
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+/* Selected days */
+.day.selected {
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+.day.selected.start, 
+.day.selected.end {
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+/* In-range days */
+.day.in-range {
+  background-color: color-mix(in srgb, var(--accent) 12%, transparent) !important;
+  color: var(--text-main) !important;
+}
+
+/* Locked / past / not-allowed days — theme-aware for both light & dark */
+.day.locked, 
+.day.not-allowed {
+  background-color: var(--surface-hover, rgba(148, 163, 184, 0.1)) !important;
+  background-image: none !important;
+  color: var(--text-muted) !important;
+  opacity: 0.55 !important;
+  font-style: normal !important;
+}
+
+.day.locked:hover, 
+.day.not-allowed:hover {
+  background-color: var(--surface-hover, rgba(148, 163, 184, 0.15)) !important;
+  color: var(--text-muted) !important;
+  opacity: 0.65 !important;
+}
+
+/* Range tooltip */
+.range-plugin-tooltip {
+  background-color: var(--surface-1) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-soft) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px var(--shadow-md, rgba(0,0,0,0.12)) !important;
+}
+
+.range-plugin-tooltip:after {
+  border-top-color: var(--surface-1) !important;
+}

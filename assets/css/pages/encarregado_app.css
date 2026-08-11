@@ -1,0 +1,46 @@
+.encarregado-hero {
+    padding: 18px;
+    margin-bottom: 16px;
+}
+
+.encarregado-hero h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: var(--text-main);
+}
+
+.encarregado-hero p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.encarregado-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.encarregado-card h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+}
+
+.encarregado-card p {
+    margin: 0 0 12px;
+    color: var(--text-muted);
+}
+
+.filters-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+    .encarregado-grid,
+    .filters-row {
+        grid-template-columns: 1fr;
+    }
+}

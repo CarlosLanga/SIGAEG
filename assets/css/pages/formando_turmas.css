@@ -1,0 +1,17 @@
+.formando-turmas-page #lista_turmas_formando tr[data-id] {
+    transition: background 0.15s ease;
+}
+
+.formando-turmas-page #lista_turmas_formando tr[data-id]:hover td {
+    background: color-mix(in srgb, var(--accent) 5%, transparent);
+}
+
+.formando-turmas-page .turma-formandos-card .detail-section-title {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.formando-turmas-page .turma-detail-stack {
+    gap: 20px;
+}

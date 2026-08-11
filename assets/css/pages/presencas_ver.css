@@ -1,0 +1,42 @@
+.modal-presenca-content {
+    max-width: 1100px;
+}
+
+.presenca-meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px 18px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+#presenca_cards {
+    margin-bottom: 16px;
+}
+
+.presenca-meta div strong {
+    color: var(--text-muted);
+}
+
+.presencas-ver .table-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: nowrap;
+}
+
+.card-wd {
+    background: #8b5cf6;
+    color: #fff;
+}
+
+.card-d {
+    background: #ef4444;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .presenca-meta {
+        grid-template-columns: 1fr;
+    }
+}

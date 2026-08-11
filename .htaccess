@@ -1,0 +1,3 @@
+ErrorDocument 404 /iicaeg_sistema/pages/404.php
+ErrorDocument 403 /iicaeg_sistema/pages/404.php
+ErrorDocument 500 /iicaeg_sistema/pages/404.php

@@ -1,0 +1,350 @@
+.usuarios-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.usuarios-subtitle {
+    margin: -4px 0 0;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.usuarios-toolbar {
+    margin-bottom: 18px;
+}
+
+.usuarios-search-field {
+    min-width: min(100%, 360px);
+}
+
+.usuarios-search-wrap {
+    position: relative;
+}
+
+.usuarios-search-wrap i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.usuarios-search-wrap input {
+    width: min(100%, 360px);
+    padding-left: 38px;
+}
+
+.user-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 220px;
+}
+
+.user-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 84%, #ffffff 16%), color-mix(in srgb, var(--accent-hover, var(--accent)) 88%, #0f172a 12%));
+    border: 1px solid var(--border-soft);
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-avatar .avatar-initials {
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+}
+
+.user-avatar-icon {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    color: #475569;
+    font-size: 15px;
+}
+
+.user-meta {
+    display: grid;
+    gap: 3px;
+}
+
+.user-name {
+    color: var(--text-main);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.user-subtitle,
+.status-subtext,
+.cell-muted {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.cell-text {
+    color: var(--text-main);
+}
+
+.role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    border: 1px solid transparent;
+}
+
+.role-admin {
+    background: #fff1f2;
+    color: #be123c;
+    border-color: #fecdd3;
+}
+
+.role-formador {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-color: #bfdbfe;
+}
+
+.role-formando {
+    background: #faf5ff;
+    color: #7e22ce;
+    border-color: #e9d5ff;
+}
+
+.role-encarregado {
+    background: #fffbeb;
+    color: #b45309;
+    border-color: #fde68a;
+}
+
+.role-default {
+    background: var(--surface-2);
+    color: var(--text-main);
+    border-color: var(--border-soft);
+}
+
+.invite-code {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+    background: var(--surface-2);
+    color: var(--text-main);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.status-stack {
+    display: grid;
+    gap: 4px;
+}
+
+.status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.status-indicator {
+    font-size: 8px;
+}
+
+.user-status-active {
+    color: #166534;
+}
+
+.user-status-active .status-indicator {
+    color: #22c55e;
+}
+
+.user-status-inactive {
+    color: #991b1b;
+}
+
+.user-status-inactive .status-indicator {
+    color: #ef4444;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    min-height: 40px;
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: none !important;
+}
+
+.btn-promote {
+    border-color: #bfdbfe;
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.btn-promote:hover {
+    background: #dbeafe;
+    color: #1e40af;
+    border-color: #93c5fd;
+    box-shadow: none !important;
+}
+
+.btn-delete {
+    border-color: #fecdd3;
+    background: #fff1f2;
+    color: #be123c;
+}
+
+.btn-delete:hover {
+    background: #ffe4e6;
+    color: #9f1239;
+    border-color: #fda4af;
+    box-shadow: none !important;
+}
+
+.btn-action:hover,
+.btn-action:focus,
+.btn-action:focus-visible,
+.btn-action:active {
+    box-shadow: none !important;
+}
+
+@media (max-width: 900px) {
+    .action-buttons {
+        justify-content: flex-start;
+    }
+
+    .btn-action span {
+        display: none;
+    }
+
+    .btn-action {
+        padding: 0 12px;
+        min-width: 38px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .usuarios-header {
+        align-items: stretch;
+    }
+
+    .usuarios-search-field,
+    .usuarios-search-wrap input {
+        width: 100%;
+    }
+}
+.usuarios-choice-modal {
+    max-width: 720px;
+    width: min(92vw, 720px);
+}
+
+.usuarios-choice-modal .modal-header {
+    align-items: flex-start;
+}
+
+.usuarios-choice-modal .modal-header h2 {
+    margin: 0 0 4px;
+}
+
+.usuarios-choice-modal .modal-header p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.usuarios-choice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.usuarios-choice-card {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 6px 12px;
+    align-items: center;
+    padding: 14px;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    background: var(--surface-1);
+    color: var(--text-main);
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.usuarios-choice-card:hover {
+    transform: translateY(-1px);
+    border-color: color-mix(in srgb, var(--accent) 55%, var(--border-soft));
+    background: color-mix(in srgb, var(--accent) 7%, var(--surface-1));
+}
+
+.usuarios-choice-icon {
+    grid-row: span 2;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.usuarios-choice-card strong {
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.usuarios-choice-card small {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+@media (max-width: 640px) {
+    .usuarios-choice-grid {
+        grid-template-columns: 1fr;
+    }
+}

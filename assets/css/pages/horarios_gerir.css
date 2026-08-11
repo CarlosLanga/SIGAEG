@@ -1,0 +1,103 @@
+.horario-gestao .table-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: nowrap;
+}
+
+.status-published {
+    background: #c7f5d6;
+    color: #1f7a3b;
+}
+
+.status-draft {
+    background: #ffe7a1;
+    color: #7a5a00;
+}
+
+.modal-view-content {
+    max-width: 960px;
+}
+
+.modal-print-content {
+    max-width: 720px;
+}
+
+.horario-meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 16px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+.print-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.radio-empty {
+    font-size: 13px;
+    color: var(--text-muted);
+    border: 1px dashed var(--border-soft);
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: var(--surface-1);
+}
+
+@media (max-width: 900px) {
+    .horario-meta {
+        grid-template-columns: 1fr;
+    }
+}
+
+.modal-view-content .horario-grade-scroll {
+    overflow-x: visible;
+}
+
+.modal-view-content .horario-grade-table {
+    width: 100%;
+    min-width: 0;
+}
+
+.modal-view-content .horario-grade-table td {
+    height: 44px;
+    min-width: 120px;
+}
+
+.horario-preview-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    background: var(--surface-1);
+}
+
+.horario-preview-slot.is-filled {
+    background: #1f8b4c;
+    color: #fff;
+    font-weight: 700;
+}
+
+.horario-preview-text {
+    font-size: 12px;
+}
+
+.horario-gestao .horario-grade-break td {
+    background: var(--surface-2);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+@media (max-width: 900px) {
+    .modal-view-content .horario-grade-scroll {
+        overflow-x: auto;
+    }
+
+    .modal-view-content .horario-grade-table {
+        min-width: 760px;
+    }
+}

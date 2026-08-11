@@ -1,0 +1,82 @@
+.formando-hero {
+    padding: 18px;
+    margin-bottom: 16px;
+}
+
+.formando-hero h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: var(--text-main);
+}
+
+.formando-hero p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.formando-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.formando-card h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+}
+
+.formando-card p {
+    margin: 0 0 12px;
+    color: var(--text-muted);
+}
+
+.filters-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+    .formando-grid,
+    .filters-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Painel lateral do dashboard (lado direito) */
+.dashboard-side-panel {
+    position: fixed;
+    right: 24px;
+    top: 84px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    z-index: 1100;
+}
+
+.dashboard-side-panel .card {
+    padding: 16px;
+}
+
+.dashboard-side-panel .section-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.dashboard-side-panel .empty-text {
+    margin: 0;
+    font-style: italic;
+    color: var(--text-muted);
+    opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+    .dashboard-side-panel {
+        display: none;
+    }
+}

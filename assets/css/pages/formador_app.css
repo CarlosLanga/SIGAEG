@@ -1,0 +1,58 @@
+.formador-hero {
+    padding: 18px;
+    margin-bottom: 16px;
+}
+
+.formador-hero h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: var(--text-main);
+}
+
+.formador-hero p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.formador-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.formador-card h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+}
+
+.formador-card p {
+    margin: 0 0 12px;
+    color: var(--text-muted);
+}
+
+.badge-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--surface-2);
+    color: var(--text-main);
+}
+
+.filters-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+    .formador-grid,
+    .filters-row {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,133 @@
+.horario-detail-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.horario-detail-title {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.horario-detail-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border-soft);
+    padding-bottom: 12px;
+}
+
+.horario-detail-head .detail-section-title {
+    margin: 0;
+    padding: 0;
+    border-bottom: 0;
+}
+
+.horario-detail-meta {
+    margin-bottom: 0;
+}
+
+.horario-resumo-wrap {
+    margin-top: 18px;
+    border-top: 1px solid var(--border-soft);
+    padding-top: 16px;
+}
+
+.horario-resumo-wrap h3 {
+    margin: 0 0 12px;
+    font-size: 15px;
+    color: var(--text-main);
+}
+
+.horario-resumo-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.horario-resumo-grupo {
+    border: 1px solid var(--border-soft);
+    background: var(--surface-1);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+
+.horario-resumo-grupo h4 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+.horario-resumo-item {
+    margin: 5px 0;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.formador-horarios-page .table-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.detail-fab-back {
+    position: fixed;
+    right: 20px;
+    bottom: 18px;
+    z-index: 1200;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid var(--border-soft);
+    background: color-mix(in srgb, var(--surface-1) 88%, transparent);
+    color: var(--text-main);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 22px color-mix(in srgb, #000 18%, transparent);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.detail-fab-back:hover {
+    transform: translateY(-1px);
+    background: var(--surface-1);
+}
+
+.detail-fab-back.is-visible {
+    display: inline-flex;
+}
+
+body.dark .detail-fab-back {
+    background: color-mix(in srgb, #0f172a 85%, transparent);
+    border-color: color-mix(in srgb, #94a3b8 28%, #0f172a 72%);
+    color: #e2e8f0;
+}
+
+#painel_detalhe_horario .horario-grade-table td {
+    height: 44px;
+}
+
+#painel_detalhe_horario .horario-preview-slot {
+    min-height: 28px;
+}
+
+@media (max-width: 640px) {
+    .horario-detail-head {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .horario-detail-head .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .detail-fab-back {
+        right: 14px;
+        bottom: 14px;
+    }
+}

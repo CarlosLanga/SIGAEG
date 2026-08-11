@@ -1,0 +1,83 @@
+.formador-turmas-page #lista_turmas_formador tr[data-id] {
+    transition: background 0.15s ease;
+}
+
+.formador-turmas-page #lista_turmas_formador tr[data-id]:hover td {
+    background: color-mix(in srgb, var(--accent) 5%, transparent);
+}
+
+.turma-detail-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.turma-detail-stack .detail-col-left,
+.turma-detail-stack .detail-col-right {
+    width: 100%;
+}
+
+.turma-detail-stack .detail-profile-card .detail-info-rows {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 24px;
+}
+
+.turma-detail-title {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.turma-section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border-soft);
+    padding-bottom: 12px;
+}
+
+.turma-section-head .detail-section-title {
+    margin: 0;
+    padding: 0;
+    border-bottom: 0;
+}
+
+.turma-detail-toolbar {
+    margin-bottom: 14px;
+}
+
+.turma-formandos-card {
+    min-width: 0;
+}
+
+@media (max-width: 900px) {
+    .turma-detail-stack .detail-profile-card .detail-info-rows {
+        grid-template-columns: 1fr;
+    }
+}
+
+.detail-horario-item.is-current-formador {
+    border-color: color-mix(in srgb, var(--accent) 55%, var(--border-soft));
+    background: color-mix(in srgb, var(--accent) 12%, var(--surface-1));
+    box-shadow: inset 3px 0 0 var(--accent);
+}
+
+body.dark .detail-horario-item.is-current-formador {
+    border-color: color-mix(in srgb, var(--accent) 65%, #334155);
+    background: color-mix(in srgb, var(--accent) 18%, #0f172a);
+}
+
+@media (max-width: 640px) {
+    .turma-section-head {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .turma-section-head .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

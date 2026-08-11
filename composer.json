@@ -1,0 +1,15 @@
+{
+    "name": "carloslanga/iicaeg_sistema",
+    "authors": [
+        {
+            "name": "CarlosLanga",
+            "email": "abelc4338@gmail.com"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.3"
+    },
+    "config": {
+        "vendor-dir": "lib/vendor"
+    }
+}
