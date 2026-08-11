@@ -1,4 +1,4 @@
-<img width="1672" height="941" alt="logo1_horizontal" src="https://github.com/user-attachments/assets/d917e1fc-060a-43cf-bcee-c360fbdad2d9" />
+<img width="1672" height="941" alt="sigaeg-brandlogo" src="https://github.com/user-attachments/assets/03a88b0f-d2be-4a6c-a201-88f8b84b7c78" />
 
 # SIGAEG – Sistema Integrado de Gestão Académica Armando Emílio Guebuza
 
